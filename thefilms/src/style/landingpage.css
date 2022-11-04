@@ -1,6 +1,6 @@
 .myBG {
   height: 100vh;
-  background: url("../assets/images/bg/main.jpg");
+  background: url("../assets/images/bg/cinemas.jpg");
   background-size: cover;
 }
 
@@ -21,7 +21,7 @@
 
 .trending {
   height: auto;
-  background: url("../assets/images/bg/scifi.jpg");
+  background: url("../assets/images/bg/romance.jpg");
   background-size: cover;
 }
 
@@ -31,7 +31,16 @@
   background-size: cover;
 }
 
+.about {
+  height: auto;
+  background: url("../assets/images/bg/main.jpg");
+  background-size: auto;
+}
+
 .movieWrapper {
+}
+
+.aboutWrapper {
 }
 
 .movieImage {
@@ -43,4 +52,11 @@
 
 .images {
   height: 500px;
+}
+
+.footer {
+  width: auto;
+  background-color: black;
+  padding: 3px;
+  text-align: center;
 }

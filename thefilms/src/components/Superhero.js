@@ -1,25 +1,25 @@
 import { Card, Container, Row, Col, Image } from "react-bootstrap";
-import antmanImage from "../assets/images/superhero/antman.jpg";
-import avengerImage from "../assets/images/superhero/avenger.jpg";
-import batmanImage from "../assets/images/superhero/batman.jpg";
-import robinhoodImage from "../assets/images/superhero/robinhood.jpg";
+import thorImage from "../assets/images/superhero/thor.jpeg";
+import gatotkacaImage from "../assets/images/superhero/gatotkaca.jpg";
+import blackImage from "../assets/images/superhero/black.jpg";
+import strangeImage from "../assets/images/superhero/strange.jpg";
 import spidermanImage from "../assets/images/superhero/spiderman-cover.jpg";
-import supermanImage from "../assets/images/superhero/superman.jpg";
+import adamImage from "../assets/images/superhero/adam.jpg";
 
 const SuperHero = () => {
   return (
     <div>
       <Container>
         <br />
-        <h1 className="text-white">SUPERHERO MOVIES</h1>
+        <h1 className="text-white">SUPERHEROES MOVIES</h1>
         <br />
         <Row>
           <Col md={4} className="movieWrapper" id="superhero">
             <Card className="movieImage">
-              <Image src={antmanImage} alt="Antman Movies" className="images" />
+              <Image src={thorImage} alt="Thor Movies" className="images" />
               <div className="bg-dark">
                 <div className="p-2 m-1 text-white">
-                  <Card.Title className="text-center">ANT MAN</Card.Title>
+                  <Card.Title className="text-center">T H O R</Card.Title>
                   <Card.Text className="text-left">This is a wider card with natural lead-in to additional content.</Card.Text>
                   <Card.Text className="text-left">Last updated 3 mins ago</Card.Text>
                 </div>
@@ -28,10 +28,10 @@ const SuperHero = () => {
           </Col>
           <Col md={4} className="movieWrapper">
             <Card className="movieImage">
-              <Image src={avengerImage} alt="Avenger Movies" className="images" />
+              <Image src={gatotkacaImage} alt="Gatotkaca Movies" className="images" />
               <div className="bg-dark">
                 <div className="p-2 m-1 text-white">
-                  <Card.Title className="text-center">AVENGER</Card.Title>
+                  <Card.Title className="text-center">GATOTKACA</Card.Title>
                   <Card.Text className="text-left">This is a wider card with natural lead-in to additional content.</Card.Text>
                   <Card.Text className="text-left">Last updated 3 mins ago</Card.Text>
                 </div>
@@ -40,10 +40,10 @@ const SuperHero = () => {
           </Col>
           <Col md={4} className="movieWrapper">
             <Card className="movieImage">
-              <Image src={batmanImage} alt="Batman Movies" className="images" />
+              <Image src={blackImage} alt="Black Movies" className="images" />
               <div className="bg-dark">
                 <div className="p-2 m-1 text-white">
-                  <Card.Title className="text-center">BATMAN</Card.Title>
+                  <Card.Title className="text-center">BLACK PANTHER</Card.Title>
                   <Card.Text className="text-left">This is a wider card with natural lead-in to additional content.</Card.Text>
                   <Card.Text className="text-left">Last updated 3 mins ago</Card.Text>
                 </div>
@@ -52,10 +52,10 @@ const SuperHero = () => {
           </Col>
           <Col md={4} className="movieWrapper">
             <Card className="movieImage">
-              <Image src={robinhoodImage} alt="Robinhood Movies" className="images" />
+              <Image src={strangeImage} alt="Strange Movies" className="images" />
               <div className="bg-dark">
                 <div className="p-2 m-1 text-white">
-                  <Card.Title className="text-center">ROBIN HOOD</Card.Title>
+                  <Card.Title className="text-center">DOCTOR STRANGE</Card.Title>
                   <Card.Text className="text-left">This is a wider card with natural lead-in to additional content.</Card.Text>
                   <Card.Text className="text-left">Last updated 3 mins ago</Card.Text>
                 </div>
@@ -67,7 +67,7 @@ const SuperHero = () => {
               <Image src={spidermanImage} alt="Spiderman Movies" className="images" />
               <div className="bg-dark">
                 <div className="p-2 m-1 text-white">
-                  <Card.Title className="text-center">SPIDERMAN</Card.Title>
+                  <Card.Title className="text-center">SPIDER-MAN</Card.Title>
                   <Card.Text className="text-left">This is a wider card with natural lead-in to additional content.</Card.Text>
                   <Card.Text className="text-left">Last updated 3 mins ago</Card.Text>
                 </div>
@@ -76,10 +76,10 @@ const SuperHero = () => {
           </Col>
           <Col md={4} className="movieWrapper">
             <Card className="movieImage">
-              <Image src={supermanImage} alt="Superman Movies" className="images" />
+              <Image src={adamImage} alt="Adam Movies" className="images" />
               <div className="bg-dark">
                 <div className="p-2 m-1 text-white">
-                  <Card.Title className="text-center">SUPERMAN</Card.Title>
+                  <Card.Title className="text-center">BLACK ADAM</Card.Title>
                   <Card.Text className="text-left">This is a wider card with natural lead-in to additional content.</Card.Text>
                   <Card.Text className="text-left">Last updated 3 mins ago</Card.Text>
                 </div>
