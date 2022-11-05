@@ -185,8 +185,8 @@
   ],
   "keranjangs": [
     {
-      "jumlah": 2,
-      "total_harga": 32000,
+      "jumlah": 1,
+      "total_harga": 16000,
       "product": {
         "id": 1,
         "kode": "K-01",
@@ -202,15 +202,15 @@
       "id": 1
     },
     {
-      "jumlah": 2,
-      "total_harga": 28000,
+      "jumlah": 1,
+      "total_harga": 10000,
       "product": {
-        "id": 2,
-        "kode": "K-02",
-        "nama": "Nasi Goreng Telur",
-        "harga": 14000,
+        "id": 6,
+        "kode": "K-06",
+        "nama": "Bakso",
+        "harga": 10000,
         "is_ready": true,
-        "gambar": "nasi-goreng-telor.jpg",
+        "gambar": "bakso.jpg",
         "category": {
           "id": 1,
           "nama": "Makanan"
@@ -219,47 +219,30 @@
       "id": 2
     },
     {
-      "jumlah": 2,
-      "total_harga": 10000,
+      "jumlah": 1,
+      "total_harga": 18000,
       "product": {
-        "id": 8,
-        "kode": "K-08",
-        "nama": "Pangsit 6 pcs",
-        "harga": 5000,
+        "id": 4,
+        "kode": "K-04",
+        "nama": "Lontong Opor Ayam",
+        "harga": 18000,
         "is_ready": true,
-        "gambar": "pangsit.jpg",
+        "gambar": "lontong-opor-ayam.jpg",
         "category": {
-          "id": 3,
-          "nama": "Cemilan"
+          "id": 1,
+          "nama": "Makanan"
         }
       },
       "id": 3
-    },
-    {
-      "jumlah": 1,
-      "total_harga": 15000,
-      "product": {
-        "id": 10,
-        "kode": "K-010",
-        "nama": "Cheese Burger",
-        "harga": 15000,
-        "is_ready": true,
-        "gambar": "cheese-burger.jpg",
-        "category": {
-          "id": 3,
-          "nama": "Cemilan"
-        }
-      },
-      "id": 4
     }
   ],
   "pesanans": [
     {
-      "total_bayar": 60000,
+      "total_bayar": 44000,
       "menus": [
         {
-          "jumlah": 2,
-          "total_harga": 32000,
+          "jumlah": 1,
+          "total_harga": 16000,
           "product": {
             "id": 1,
             "kode": "K-01",
@@ -272,19 +255,35 @@
               "nama": "Makanan"
             }
           },
-          "keterangan": "Semuanya Pedas",
           "id": 1
         },
         {
-          "jumlah": 2,
-          "total_harga": 28000,
+          "jumlah": 1,
+          "total_harga": 10000,
           "product": {
-            "id": 2,
-            "kode": "K-02",
-            "nama": "Nasi Goreng Telur",
-            "harga": 14000,
+            "id": 6,
+            "kode": "K-06",
+            "nama": "Bakso",
+            "harga": 10000,
             "is_ready": true,
-            "gambar": "nasi-goreng-telor.jpg",
+            "gambar": "bakso.jpg",
+            "category": {
+              "id": 1,
+              "nama": "Makanan"
+            }
+          },
+          "id": 2
+        },
+        {
+          "jumlah": 1,
+          "total_harga": 18000,
+          "product": {
+            "id": 4,
+            "kode": "K-04",
+            "nama": "Lontong Opor Ayam",
+            "harga": 18000,
+            "is_ready": true,
+            "gambar": "lontong-opor-ayam.jpg",
             "category": {
               "id": 1,
               "nama": "Makanan"
