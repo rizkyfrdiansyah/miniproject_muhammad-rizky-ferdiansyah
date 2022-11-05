@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import { Card, Container, Row, Col, Image } from "react-bootstrap";
 import duneImage from "../assets/images/trending/dune.jpg";
 import peakyImage from "../assets/images/trending/peaky.jpg";
@@ -5,8 +6,22 @@ import jurassicImage from "../assets/images/trending/jurassic.jpg";
 import hometeamImage from "../assets/images/trending/hometeam.jpg";
 import lightyearImage from "../assets/images/trending/lightyear.jpg";
 import hustleImage from "../assets/images/trending/hustle.jpg";
+import axios from "axios";
 
 const Trending = () => {
+  const [movies, setMovies] = useState([]);
+  useEffect(() => {
+    axios
+      .get(`${process.env.REACT_APP_BASE_URL}/discover/movie`, {
+        params: {
+          api_key: process.env.REACT_APP_TMDB_KEY,
+        },
+      })
+      .then((result) => {
+        console.log("datas => ", result);
+      });
+  }, []);
+
   return (
     <div>
       <Container>
@@ -26,7 +41,7 @@ const Trending = () => {
               </div>
             </Card>
           </Col>
-          <Col md={4} className="movieWrapper">
+          {/* <Col md={4} className="movieWrapper">
             <Card className="movieImage">
               <Image src={peakyImage} alt="Peaky Movies" className="images" />
               <div className="bg-dark">
@@ -85,7 +100,7 @@ const Trending = () => {
                 </div>
               </div>
             </Card>
-          </Col>
+          </Col> */}
         </Row>
       </Container>
     </div>
