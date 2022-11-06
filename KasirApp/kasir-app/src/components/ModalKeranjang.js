@@ -4,7 +4,7 @@ import React from "react";
 import { Modal, Button, Form } from "react-bootstrap";
 import { numberWithCommas } from "../utils/utils";
 
-const ModalKeranjang = ({ showModal, handleClose, keranjangDetail, jumlah, keterangan, tambah, kurang, changeHandler, handleSubmit }) => {
+const ModalKeranjang = ({ showModal, handleClose, keranjangDetail, jumlah, keterangan, tambah, kurang, changeHandler, handleSubmit, totalHarga, hapusPesanan }) => {
   if (keranjangDetail) {
     return (
       <Modal show={showModal} onHide={handleClose}>
@@ -19,19 +19,19 @@ const ModalKeranjang = ({ showModal, handleClose, keranjangDetail, jumlah, keter
             <Form.Group controlId="exampleForm.ControlInput">
               <Form.Label>Total Harga :</Form.Label>
               <p>
-                <strong>Rp. {numberWithCommas(keranjangDetail.total_harga)}</strong>
+                <strong>Rp. {numberWithCommas(totalHarga)}</strong>
               </p>
             </Form.Group>
 
             <Form.Group controlId="exampleForm.ControlInput">
               <Form.Label>Jumlah :</Form.Label>
               <br />
-              <Button variant="primary" size="sm" className="mr-2" onClick={() => tambah}>
-                <FontAwesomeIcon icon={faPlus} />
+              <Button variant="primary" size="sm" className="mr-2" onClick={() => kurang()}>
+                <FontAwesomeIcon icon={faMinus} />
               </Button>
               <strong>{jumlah}</strong>
-              <Button variant="primary" size="sm" className="ml-2" onClick={() => kurang}>
-                <FontAwesomeIcon icon={faMinus} />
+              <Button variant="primary" size="sm" className="ml-2" onClick={() => tambah()}>
+                <FontAwesomeIcon icon={faPlus} />
               </Button>
             </Form.Group>
             <br />
@@ -46,7 +46,7 @@ const ModalKeranjang = ({ showModal, handleClose, keranjangDetail, jumlah, keter
           </Form>
         </Modal.Body>
         <Modal.Footer>
-          <Button variant="danger">
+          <Button variant="danger" onClick={() => hapusPesanan(keranjangDetail.id)}>
             <FontAwesomeIcon icon={faTrash} />
             Hapus Pesanan
           </Button>
