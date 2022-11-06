@@ -54,7 +54,7 @@ export default class Hasil extends Component {
 
   changeHandler = (event) => {
     this.setState({
-      keteranga: event.target.value,
+      keterangan: event.target.value,
     });
   };
 
@@ -67,12 +67,13 @@ export default class Hasil extends Component {
       jumlah: this.state.jumlah,
       total_harga: this.state.totalHarga,
       product: this.state.keranjangDetail.product,
-      keteranga: this.state.keranjang,
+      keterangan: this.state.keterangan,
     };
 
     axios
       .put(API_URL + "keranjangs/" + this.state.keranjangDetail.id, data)
       .then((res) => {
+        this.props.getListKeranjang();
         Swal.fire({
           title: "Update Pesanan!",
           text: "Sukses Update Pesanan " + data.product.nama,
@@ -92,6 +93,7 @@ export default class Hasil extends Component {
     axios
       .delete(API_URL + "keranjangs/" + id)
       .then((res) => {
+        this.props.getListKeranjang();
         Swal.fire({
           title: "Hapus Pesanan!",
           text: "Sukses Hapus Pesanan " + this.state.keranjangDetail.product.nama,
