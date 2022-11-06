@@ -129,12 +129,12 @@ export default class Home extends Component {
         <Container fluid>
           <Row>
             <ListCategories changeCategory={this.changeCategory} categoriYangDipilih={categoriYangDipilih} />
-            <Col>
+            <Col className="mt-3">
               <h4>
                 <strong>Daftar Produk</strong>
               </h4>
               <hr />
-              <Row>{menus && menus.map((menu) => <Menus key={menu.id} menu={menu} masukKeranjang={this.masukKeranjang} />)}</Row>
+              <Row className="overflow-auto menu">{menus && menus.map((menu) => <Menus key={menu.id} menu={menu} masukKeranjang={this.masukKeranjang} />)}</Row>
             </Col>
             <Hasil keranjangs={keranjangs} {...this.props} />
           </Row>
