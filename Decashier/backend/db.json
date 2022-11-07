@@ -183,43 +183,7 @@
       }
     }
   ],
-  "keranjangs": [
-    {
-      "jumlah": 1,
-      "total_harga": 10000,
-      "product": {
-        "id": 6,
-        "kode": "K-06",
-        "nama": "Bakso",
-        "harga": 10000,
-        "is_ready": true,
-        "gambar": "bakso.jpg",
-        "category": {
-          "id": 1,
-          "nama": "Makanan"
-        }
-      },
-      "keterangan": "Bakso Kosongan",
-      "id": 1
-    },
-    {
-      "jumlah": 1,
-      "total_harga": 13000,
-      "product": {
-        "id": 5,
-        "kode": "K-05",
-        "nama": "Mie Goreng",
-        "harga": 13000,
-        "is_ready": true,
-        "gambar": "mie-goreng.jpg",
-        "category": {
-          "id": 1,
-          "nama": "Makanan"
-        }
-      },
-      "id": 2
-    }
-  ],
+  "keranjangs": [],
   "pesanans": [
     {
       "total_bayar": 60000,
@@ -261,6 +225,30 @@
         }
       ],
       "id": 1
+    },
+    {
+      "total_bayar": 26000,
+      "menus": [
+        {
+          "jumlah": 2,
+          "total_harga": 26000,
+          "product": {
+            "id": 5,
+            "kode": "K-05",
+            "nama": "Mie Goreng",
+            "harga": 13000,
+            "is_ready": true,
+            "gambar": "mie-goreng.jpg",
+            "category": {
+              "id": 1,
+              "nama": "Makanan"
+            }
+          },
+          "keterangan": "pedes",
+          "id": 2
+        }
+      ],
+      "id": 2
     }
   ]
 }
