@@ -27,6 +27,24 @@ export default class Home extends Component {
         console.log("Error yaa ", error);
       });
 
+    this.getListKeranjang();
+  }
+
+  // componentDidUpdate(prevState) {
+  //   if (this.state.keranjangs !== prevState.keranjangs) {
+  //     axios
+  //       .get(API_URL + "keranjangs")
+  //       .then((res) => {
+  //         const keranjangs = res.data;
+  //         this.setState({ keranjangs });
+  //       })
+  //       .catch((error) => {
+  //         console.log("Error yaa ", error);
+  //       });
+  //   }
+  // }
+
+  getListKeranjang = () => {
     axios
       .get(API_URL + "keranjangs")
       .then((res) => {
@@ -36,21 +54,7 @@ export default class Home extends Component {
       .catch((error) => {
         console.log("Error yaa ", error);
       });
-  }
-
-  componentDidUpdate(prevState) {
-    if (this.state.keranjangs !== prevState.keranjangs) {
-      axios
-        .get(API_URL + "keranjangs")
-        .then((res) => {
-          const keranjangs = res.data;
-          this.setState({ keranjangs });
-        })
-        .catch((error) => {
-          console.log("Error yaa ", error);
-        });
-    }
-  }
+  };
 
   changeCategory = (value) => {
     this.setState({
@@ -83,6 +87,7 @@ export default class Home extends Component {
           axios
             .post(API_URL + "keranjangs", keranjang)
             .then((res) => {
+              this.getListKeranjang();
               swal({
                 title: "Sukses Masuk Keranjang",
                 text: "Sukses Masuk Keranjang " + keranjang.product.nama,
@@ -136,7 +141,7 @@ export default class Home extends Component {
               <hr />
               <Row className="overflow-auto menu">{menus && menus.map((menu) => <Menus key={menu.id} menu={menu} masukKeranjang={this.masukKeranjang} />)}</Row>
             </Col>
-            <Hasil keranjangs={keranjangs} {...this.props} />
+            <Hasil keranjangs={keranjangs} {...this.props} getListKeranjang={this.getListKeranjang} />
           </Row>
         </Container>
       </div>
