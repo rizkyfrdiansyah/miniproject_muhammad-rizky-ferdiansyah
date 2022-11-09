@@ -183,42 +183,7 @@
       }
     }
   ],
-  "keranjangs": [
-    {
-      "jumlah": 1,
-      "total_harga": 15000,
-      "product": {
-        "id": 11,
-        "kode": "K-011",
-        "nama": "Coffe Late",
-        "harga": 15000,
-        "is_ready": true,
-        "gambar": "coffe-late.jpg",
-        "category": {
-          "id": 2,
-          "nama": "Minuman"
-        }
-      },
-      "id": 3
-    },
-    {
-      "jumlah": 1,
-      "total_harga": 5000,
-      "product": {
-        "id": 9,
-        "kode": "K-09",
-        "nama": "Kentang Goreng",
-        "harga": 5000,
-        "is_ready": true,
-        "gambar": "kentang-goreng.jpg",
-        "category": {
-          "id": 3,
-          "nama": "Cemilan"
-        }
-      },
-      "id": 4
-    }
-  ],
+  "keranjangs": [],
   "pesanans": [
     {
       "total_bayar": 16000,
