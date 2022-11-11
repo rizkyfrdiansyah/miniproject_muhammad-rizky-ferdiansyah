@@ -131,6 +131,14 @@ button {
   background-color: #22668a;
 }
 
+.login {
+  position: absolute;
+  width: 428px;
+  height: 926px;
+  left: 506px;
+  top: 58px;
+}
+
 @media only screen and (max-height: 1000px) {
   .hasil {
     height: 650px;

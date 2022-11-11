@@ -29,7 +29,7 @@ const Login = () => {
   return (
     <>
       {success ? (
-        <section>
+        <section className="login">
           <h1>You are logged in!</h1>
           <br />
           <p>
