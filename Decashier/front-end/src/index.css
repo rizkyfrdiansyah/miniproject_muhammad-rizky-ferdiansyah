@@ -8,7 +8,7 @@
 
 html {
   font-family: "Nunito", sans-serif;
-  font-size: 22px;
+  font-size: 17px;
   color: #fff;
 }
 
@@ -32,13 +32,15 @@ body {
 
 section {
   width: 100%;
+  margin: auto;
+  margin-top: 130px;
   max-width: 420px;
   min-height: 400px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   padding: 1rem;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: #22668a;
 }
 
 form {
@@ -131,12 +133,12 @@ button {
   background-color: #22668a;
 }
 
-.login {
-  position: absolute;
-  width: 428px;
-  height: 926px;
-  left: 506px;
-  top: 58px;
+.about {
+  width: 100%;
+}
+
+.cashier-card {
+  background-image: url(../public/assets/images/team/cashier.jpg);
 }
 
 @media only screen and (max-height: 1000px) {
