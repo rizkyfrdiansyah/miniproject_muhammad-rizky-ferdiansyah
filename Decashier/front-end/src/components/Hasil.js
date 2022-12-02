@@ -3,9 +3,10 @@ import { Badge, Card, Col, ListGroup, Row } from "react-bootstrap";
 import { numberWithCommas } from "../utils/utils";
 import ModalKeranjang from "./ModalKeranjang";
 import TotalBayar from "./TotalBayar";
-import { API_URL } from "../utils/constants";
+// import { API_URL } from "../utils/constants";
 import axios from "axios";
 import swal from "sweetalert";
+import client from "./apollo-client";
 
 export default class Hasil extends Component {
   constructor(props) {
@@ -71,7 +72,7 @@ export default class Hasil extends Component {
     };
 
     axios
-      .put(API_URL + "keranjangs/" + this.state.keranjangDetail.id, data)
+      .put(client + "keranjangs/" + this.state.keranjangDetail.id, data)
       .then((res) => {
         this.props.getListKeranjang();
         swal({
@@ -91,7 +92,7 @@ export default class Hasil extends Component {
     this.handleClose();
 
     axios
-      .delete(API_URL + "keranjangs/" + id)
+      .delete(client + "keranjangs/" + id)
       .then((res) => {
         this.props.getListKeranjang();
         swal({

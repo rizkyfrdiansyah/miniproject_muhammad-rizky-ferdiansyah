@@ -4,7 +4,8 @@ import axios from "axios";
 import React, { Component } from "react";
 import { Row, Col, Button } from "react-bootstrap";
 import { numberWithCommas } from "../utils/utils";
-import { API_URL } from "../utils/constants";
+import client from "./apollo-client";
+// import { API_URL } from "../utils/constants";
 
 export default class TotalBayar extends Component {
   submitTotalBayar = (totalBayar) => {
@@ -13,7 +14,7 @@ export default class TotalBayar extends Component {
       menus: this.props.keranjangs,
     };
 
-    axios.post(API_URL + "pesanans", pesanan).then((res) => {
+    axios.post(client + "pesanans", pesanan).then((res) => {
       this.props.history.push("/sukses");
     });
   };

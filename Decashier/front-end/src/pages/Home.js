@@ -1,9 +1,10 @@
 import React, { Component } from "react";
 import { Row, Col, Container } from "react-bootstrap";
 import { Hasil, ListCategories, Menus } from "../components";
-import { API_URL } from "../utils/constants";
+// import { API_URL } from "../utils/constants";
 import axios from "axios";
 import swal from "sweetalert";
+import client from "../components/apollo-client";
 
 export default class Home extends Component {
   constructor(props) {
@@ -18,7 +19,7 @@ export default class Home extends Component {
 
   componentDidMount() {
     axios
-      .get(API_URL + "products?category.nama=" + this.state.categoriYangDipilih)
+      .get(client + "products?category.nama=" + this.state.categoriYangDipilih)
       .then((res) => {
         const menus = res.data;
         this.setState({ menus });
@@ -32,7 +33,7 @@ export default class Home extends Component {
 
   getListKeranjang = () => {
     axios
-      .get(API_URL + "keranjangs")
+      .get(client + "keranjangs")
       .then((res) => {
         const keranjangs = res.data;
         this.setState({ keranjangs });
@@ -49,7 +50,7 @@ export default class Home extends Component {
     });
 
     axios
-      .get(API_URL + "products?category.nama=" + value)
+      .get(client + "products?category.nama=" + value)
       .then((res) => {
         const menus = res.data;
         this.setState({ menus });
@@ -61,7 +62,7 @@ export default class Home extends Component {
 
   masukKeranjang = (value) => {
     axios
-      .get(API_URL + "keranjangs?product.id=" + value.id)
+      .get(client + "keranjangs?product.id=" + value.id)
       .then((res) => {
         if (res.data.length === 0) {
           const keranjang = {
@@ -71,7 +72,7 @@ export default class Home extends Component {
           };
 
           axios
-            .post(API_URL + "keranjangs", keranjang)
+            .post(client + "keranjangs", keranjang)
             .then((res) => {
               this.getListKeranjang();
               swal({
@@ -93,7 +94,7 @@ export default class Home extends Component {
           };
 
           axios
-            .put(API_URL + "keranjangs/" + res.data[0].id, keranjang)
+            .put(client + "keranjangs/" + res.data[0].id, keranjang)
             .then((res) => {
               swal({
                 title: "Sukses Masuk Keranjang",

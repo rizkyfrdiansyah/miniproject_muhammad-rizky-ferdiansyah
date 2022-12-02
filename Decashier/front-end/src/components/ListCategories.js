@@ -1,9 +1,10 @@
 import React, { Component } from "react";
 import { Col, ListGroup } from "react-bootstrap";
 import axios from "axios";
-import { API_URL } from "../utils/constants";
+// import { API_URL } from "../utils/constants";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUtensils, faCoffee, faCheese } from "@fortawesome/free-solid-svg-icons";
+import client from "./apollo-client";
 
 const Icon = ({ nama }) => {
   if (nama === "Makanan") return <FontAwesomeIcon icon={faUtensils} className="mr-2" />;
@@ -24,7 +25,7 @@ export default class ListCategories extends Component {
 
   componentDidMount() {
     axios
-      .get(API_URL + "categories")
+      .get(client + "categories")
       .then((res) => {
         const categories = res.data;
         this.setState({ categories });
