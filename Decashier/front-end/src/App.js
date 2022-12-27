@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import { NavbarComponent } from "./components";
-import { Home, Sukses, About, Login } from "./pages";
+// import { Sukses, About, Login } from "./pages";
 // import { render, screen } from "@testing-library/react";
-
+import Home from "./pages";
 export default class App extends Component {
   render() {
     // test("renders learn react link", () => {
@@ -17,9 +17,6 @@ export default class App extends Component {
         <main>
           <Switch>
             <Route path="/" component={Home} exact />
-            <Route path="/sukses" component={Sukses} exact />
-            <Route path="/about" component={About} exact />
-            <Route path="/login" component={Login} exact />
           </Switch>
         </main>
       </BrowserRouter>

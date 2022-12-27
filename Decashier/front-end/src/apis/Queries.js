@@ -16,3 +16,26 @@ export const Products = gql`
     }
   }
 `;
+
+export const Product = gql`
+  query MyQuery {
+    Decashier_products {
+      gambar
+      harga
+      id
+      id_category
+      is_ready
+      kode
+      nama
+    }
+  }
+`;
+
+export const Category = gql`
+  query MyQuery {
+    Decashier_categories {
+      id
+      nama
+    }
+  }
+`;
