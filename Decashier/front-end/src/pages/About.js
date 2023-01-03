@@ -17,7 +17,7 @@ const About = () => {
               <strong>Our Team Members</strong>
             </p>
 
-            <Row xs={1} md={2} className="g-4">
+            {/* <Row xs={1} md={2} className="g-4">
               {Array.from({ length: 4 }).map((_, idx) => (
                 <Col>
                   <Card className="cashier-card">
@@ -29,7 +29,7 @@ const About = () => {
                   </Card>
                 </Col>
               ))}
-            </Row>
+            </Row> */}
           </Col>
         </Row>
       </Container>

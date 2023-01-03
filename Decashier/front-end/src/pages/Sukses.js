@@ -3,7 +3,7 @@ import { Button, Image } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import client from "../components/apollo-client";
-// import { API_URL } from "../utils/constants";
+import { API_URL } from "../utils/constants";
 
 export default class Sukses extends Component {
   componentDidMount() {
